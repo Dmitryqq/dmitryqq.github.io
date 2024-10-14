@@ -1,0 +1,54 @@
+.element {
+    /* width: 90%; */
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+}
+
+.element-button-container {
+    text-align: right;
+}
+
+.element-button-container button {
+    min-width: 100px;
+}
+
+.bs-stepper-content h2 {
+    text-align: center;
+}
+
+#article-group-1,
+#article-group-2,
+#article-group-3,
+#publication-group-1,
+#publication-group-2,
+#publication-group-3,
+#publication-other-group-1,
+#publication-other-group-2,
+#publication-other-group-3,
+#database-group-1,
+#database-group-2 {
+    padding: 10px 0;
+}
+
+.btn-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.tab-pane>.profile-element {
+    /* border: 2px solid gray; */
+    padding: 10px;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    margin-bottom: 10px;
+}
+
+.tab-pane>.profile-element p:last-child {
+    margin-bottom: 0px;
+}
+
+.select2 span {
+    color: black;
+}
