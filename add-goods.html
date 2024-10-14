@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Портфолио</title>
+    <title></title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -71,30 +71,29 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link">
+                            <a href="/storages.html" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
-                                <p>...</p>
+                                <p>Склады</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/dashboard/faculties" class="nav-link">
+                            <a href="/goods.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
-                                <p>...</p>
+                                <p>Товар</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/dashboard/departments" class="nav-link">
+                            <a href="/colors.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
-                                <p>...</p>
+                                <p>Цвета</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/dashboard/positions" class="nav-link">
+                            <a href="/seasons.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
-                                <p>...</p>
+                                <p>Сезоны</p>
                             </a>
                         </li>
-
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -201,6 +200,19 @@
                                                             </select>
                                                         </div>
                                                     </div>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-md-6">
+                                                            <div id="department-block">
+                                                                <label for="department">Производитель?</label>
+                                                                <select id="department" name="department"
+                                                                    class="form-control" aria-label="Производитель">
+                                                                    <option value="" selected disabled>Производитель
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <div class="form-group row">
                                                         <div class="col-md-12">
                                                             <label for="full_name">Описание</label>
@@ -253,59 +265,7 @@
                                                 <div id="dissertation-part" class="content" role="tabpanel"
                                                     aria-labelledby="dissertation-part-trigger">
 
-                                                    <div class="form-group row">
-                                                        <div class="col-md-6">
-                                                            <div id="department-block">
-                                                                <label for="department">Товар</label>
-                                                                <select id="department" name="department"
-                                                                    class="form-control" aria-label="Товар">
-                                                                    <option value="" selected disabled>Товар
-                                                                    </option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div id="department-block">
-                                                                <label for="department">Склад</label>
-                                                                <select id="department" name="department"
-                                                                    class="form-control" aria-label="Склад">
-                                                                    <option value="" selected disabled>Склад
-                                                                    </option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox">
-                                                                <label class="form-check-label">Нестандартная
-                                                                    линейка</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="states1">Размеры</label>
-                                                            <select
-                                                                class="form-control select2 js-example-basic-multiple"
-                                                                id="states1" name="states1[]" multiple="multiple">
-                                                                <option value="AL">XXL</option>
-                                                                <option value="AL">XL</option>
-                                                                <option value="WY">L</option>
-                                                                <option value="WY">M</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="form-group row">
-                                                        <div class="col-md-6">
-                                                            <label for="full_name">Количество</label>
-                                                            <input type="text" class="form-control" id="full_name"
-                                                                name="full_name" placeholder="Количество" required>
-                                                        </div>
-                                                    </div>
-
-                                                    <button type="button"
-                                                        class="btn btn-success add-element">Добавить</button>
                                                     <button type="button" class="btn btn-primary"
                                                         onclick="stepper.previous()">Назад</button>
                                                     <button type="button" class="btn btn-primary"
@@ -334,8 +294,10 @@
                                                                     <td></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td></td>
-                                                                    <td></td>
+                                                                    <td><input type="text" class="form-control"
+                                                                            placeholder="Материал"></td>
+                                                                    <td><input type="text" class="form-control"
+                                                                            placeholder="%"></td>
                                                                     <td><button type="submit" value="Save"
                                                                             name="save_profile"
                                                                             class="btn btn-success btn-block">
@@ -344,98 +306,6 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                    </div>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.previous()">Назад</button>
-                                                </div>
-                                                <div id="manual-part" class="content" role="tabpanel"
-                                                    aria-labelledby="manual-part-trigger">
-                                                    <h2>Учебники и учебные пособия</h2>
-                                                    <button type="button"
-                                                        class="btn btn-success add-element">Добавить</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.previous()">Назад</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.next()">Далее</button>
-                                                </div>
-                                                <div id="publication-part" class="content" role="tabpanel"
-                                                    aria-labelledby="publication-part-trigger">
-                                                    <h2>Публикации в научных изданиях, индексируемых (n* баллы)</h2>
-                                                    <div id="publication-group-1">
-                                                        <h5>Статьи в журналах, включеных в РИНЦ</h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
-                                                    </div>
-                                                    <div id="publication-group-2">
-                                                        <h5>Статьи в журналах, включенных в перечень ВАК КР</h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
-                                                    </div>
-                                                    <div id="publication-group-3">
-                                                        <h5>Статьи в сборниках научных трудов (материалах конференции)
-                                                        </h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
-                                                    </div>
-                                                    <div id="publication-group-4">
-                                                        <h5>В базе данных <b>Web of Science</b></h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
-                                                    </div>
-                                                    <div id="publication-group-5">
-                                                        <h5>В базе данных <b>Scopus</b></h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
-                                                    </div>
-
-                                                    <div id="exhibition-part">
-                                                        <h5>Выставки</h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
-                                                    </div>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.previous()">Назад</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.next()">Далее</button>
-                                                </div>
-                                                <!-- <div id="database-part" class="content" role="tabpanel" aria-labelledby="database-part-trigger">
-                                                    
-                                                    <button type="button" class="btn btn-primary" onclick="stepper.previous()">Назад</button>
-                                                    <button type="button" class="btn btn-primary" onclick="stepper.next()">Далее</button>
-                                                </div> -->
-                                                <div id="patent-part" class="content" role="tabpanel"
-                                                    aria-labelledby="patent-part-trigger">
-                                                    <h2>Патенты</h2>
-                                                    <button type="button"
-                                                        class="btn btn-success add-element">Добавить</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.previous()">Назад</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.next()">Далее</button>
-                                                </div>
-                                                <div id="qualification-part" class="content" role="tabpanel"
-                                                    aria-labelledby="patent-part-trigger">
-                                                    <h2>Повышение квалификации</h2>
-                                                    <button type="button"
-                                                        class="btn btn-success add-element">Добавить</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.previous()">Назад</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        onclick="stepper.next()">Далее</button>
-                                                </div>
-                                                <div id="eumk-part" class="content" role="tabpanel"
-                                                    aria-labelledby="eumk-part-trigger">
-                                                    <h2>ЭУМК КГТУ за последний 5 лет</h2>
-                                                    <div id="eumk-video-part">
-                                                        <h5>Видео лекции</h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
-                                                    </div>
-                                                    <div id="eumk-virtual-part">
-                                                        <h5>Виртуальные лабораторные работы и электронные
-                                                            образовательные программы</h5>
-                                                        <button type="button"
-                                                            class="btn btn-success add-element">Добавить</button>
                                                     </div>
                                                     <button type="button" class="btn btn-primary"
                                                         onclick="stepper.previous()">Назад</button>

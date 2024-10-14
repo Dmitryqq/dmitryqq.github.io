@@ -52,3 +52,8 @@
 .select2 span {
     color: black;
 }
+
+.select2-container {
+    width: 100% !important;
+    max-width: 100%;
+}
